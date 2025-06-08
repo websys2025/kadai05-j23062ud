@@ -18,6 +18,11 @@
             const [latitude,longitude] = location.split(",");
 
             const a = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo`;
+            const ares = await fetch(a);
+            const JSONdata = await ares.json();
+
+            
+            
             document.getElementById("result").innerHTML += myForm.form_data.value+"<br />";
             document.apiform.reset();
         }
