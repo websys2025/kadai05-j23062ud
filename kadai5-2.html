@@ -23,8 +23,8 @@
 
             
             
-            document.getElementById("result").innerHTML += myForm.form_data.value+"<br />";
-            document.apiform.reset();
+            document.getElementById("result").innerHTML  `最高気温：${JSONdata.daily.temperature_2m_max[0]}℃, 最低気温：${JSONdata.daily.temperature_2m_min[0]}℃`;
+            myForm.reset();
         }
     </script>
 </body>
